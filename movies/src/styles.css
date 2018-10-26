@@ -1,0 +1,231 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700') format("opentype");
+  }
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+body{
+    background-color: #d8d8d8;
+    margin: 0px
+}
+.mv_src {
+    text-align: center;
+    padding: 8px 0;
+}
+.secr_fld input {   
+   height: 36px;
+   width: 100%;
+   padding-left: 16px;
+   color: #000;
+   font-size: 13px;
+   font-weight: 500;
+   position: relative;
+   border: none;
+}
+form {
+    max-width: 450px;
+    margin: auto;
+    position: relative;
+ }
+ 
+ button.btn {
+    position: absolute;
+    top: 0;
+    right: -16px;
+    border: none;
+    background: #8077e8;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    height: 38px;
+    padding: 0 16px;
+    color:#fff;
+}
+.mv_main {
+    padding: 10px 0px;
+    min-height: 88vh;
+    display: inline-block;
+    background: #fff;
+    width: 100%;
+    border: none;
+ }
+ 
+ .mo_list {
+    float: left;
+    width: 30%;
+    margin-right: 15px;
+    /* max-height: 86vh; */
+ }
+ 
+ .mv_dtls {
+    float: right;
+    width: 67.5%;
+    background: #d8d8d8;
+    min-height: 88vh;
+    border-radius: 2px;
+    margin-right: 10px;
+ }
+ 
+.lst_main {
+    width: 100%;
+    clear: both;
+    padding: 6px;
+    padding-top: 0;
+    height: 86vh;
+    overflow-y: scroll;
+}
+.left_div img {
+    width: 80px;
+    height: 55px;
+}
+
+.left_div {
+    float: left;
+    width: 25%; 
+}
+.right_div {
+    float: left;
+    width: 70%;
+}
+.right_div h4 {
+    margin: 0;
+    margin-bottom: 3px;
+}
+.lst_row {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 13px;
+    box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    min-height: 70px;
+    max-height: 125px;
+    border-radius: 3px;
+    width: 93%
+}
+.right_div p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+.p_mv {
+    display: inherit;
+    width: 100%;
+}
+.p_mv p {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Roboto';
+}
+.mv_dt_cmp {
+    margin: 11px;
+}
+.no_results p span {
+    background: yellow;
+}
+.no_results p {
+    text-align: center;
+    color: red;
+    font-size: 19px;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+}
+
+
+.loadergif img {
+    width: 9%;
+}
+
+.loadergif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.mv_dt_cmp {
+    margin: 11px;
+    background: #fff;
+    /* margin: 19px; */
+    padding: 8px;
+}
+
+.img_pst img {
+    width: 249px;
+}
+.post_tl {
+    display: inline-block;
+    width: 100%;
+}
+.img_pst {
+    float: left;
+    width: 30%;
+    margin-right: 15px;
+}
+.tl {
+    float: left;
+    width: 65%;
+}
+
+.posters_img li img {
+    width: 150px;
+}
+.posters_img ul {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+.posters_img ul li {
+    display: inline-block;
+}
+.posters_img li {
+    margin-right: 43px;
+    border: 1px solid red;
+}
+h2.tlt_h2 {
+    text-align: center;
+    background: #ece6e6;
+    padding: 6px;
+    font-size: 27px;
+    color: #f44141;
+}
+.sym_cls h3, .cat h3, .posters_img h3 {
+    margin-bottom: 10px;
+    background-color: #e2abab;
+    padding: 6px;
+}
+.sym_cls p{
+    margin-top: 2px;
+    font-size: 15px;
+}
+.cat span{
+    font-size: 15px;
+}
+.video_d {
+    margin-bottom: 11px;
+}
+.tl h2 {
+    margin-bottom: 8px;
+}
+span.rate {
+    font-size: 18px;
+}
+.posters_img {
+    margin-top: 10px;
+    border: 2px solid #d8d8d8;
+    padding-bottom: 10px;
+}
+.posters_img h3{
+    margin-top: 0;
+}
+span.comma_cls:before {
+    content: ", ";
+}

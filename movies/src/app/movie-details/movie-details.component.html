@@ -1,0 +1,60 @@
+<div class="mv_dt_cmp" *ngIf="singleMovie!=null">
+    <h2 class="tlt_h2">{{singleMovie.original_title}}</h2>
+  <div class="video_d">
+      <div *ngFor="let video of singleMovie.videos.results | slice:0:1; " >
+          <iframe width="100%" height="315"
+          [src]="video | iframe">
+          </iframe>
+        </div>
+  </div>
+  <div class="post_tl">
+    <div class="img_pst">
+      <img src="./../../assets/images/dummy.png" *ngIf="singleMovie.poster_path==null">
+      <img src="https://image.tmdb.org/t/p/w500/{{singleMovie.poster_path}}" *ngIf="singleMovie.poster_path!=null">
+    </div>
+    <div class="tl">
+      <p class="rate">Rated {{singleMovie.vote_average}}/10</p>
+      <p class="dur">Duration {{singleMovie.runtime| mintohrs}}</p>
+      <div class="sym_cls" *ngIf="singleMovie.overview!=''">
+          <h3>Synopsis</h3>
+          <p>{{singleMovie.overview}}</p>
+        </div>
+        <div class="cat" *ngIf="singleMovie.genres!='' && singleMovie.genres!=null">
+          <h3>Category</h3>
+          <span *ngFor="let cat of singleMovie.genres; let i = index" [ngClass]="i>0? 'comma_cls' :''">{{cat.name}}</span>
+        </div>
+        <div class="cat" *ngIf="singleMovie.spoken_languages!='' && singleMovie.spoken_languages!=null">
+          <h3>Languages</h3>
+          <span *ngFor="let lan of singleMovie.spoken_languages; let i = index" [ngClass]="i>0? 'comma_cls' :''">{{lan.name}}</span>
+        </div>
+        <div class="cat" *ngIf="singleMovie.production_companies!='' && singleMovie.production_companies!=null">
+          <h3>Production Companies</h3>
+          <span *ngFor="let prdt of singleMovie.production_companies; let i = index" [ngClass]="i>0? 'comma_cls' :''">{{prdt.name}}</span>
+        </div>
+        
+
+    </div>
+  </div>
+  <div class="posters_img" *ngIf="singleMovie.images.posters.length!=0">
+    <h3>Posters</h3>
+    <ul class="">
+        <li *ngFor="let poster of singleMovie.images.posters"> 
+            <img src="https://image.tmdb.org/t/p/w500/{{poster.file_path}}">
+        </li>
+    </ul>
+  </div>
+
+  <div class="posters_img" *ngIf="singleMovie.images.backdrops.length!=0">
+    <h3>Backdrops</h3>
+    <ul class="">
+        <li *ngFor="let backdrops of singleMovie.images.backdrops"> 
+            <img src="https://image.tmdb.org/t/p/w500/{{backdrops.file_path}}">
+        </li>
+    </ul>
+  </div>
+  <div class="mask" *ngIf="showLoader">
+    <div class="loadergif">
+      <img src="./../../assets/images/Dual Ring-1s-200px.gif">
+    </div>
+  </div>
+</div>

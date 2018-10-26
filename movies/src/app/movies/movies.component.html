@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="mv_src">
+    <app-movies-search (searchValue)="searchValues($event)"></app-movies-search>
+  </div>
+  <div class="mv_main">
+      <div class="mo_list" >
+        <div class="lst_main">
+          <app-movies-list (movieDetialsOutPut)="movieDetials($event)"></app-movies-list>
+        </div>
+      </div>
+      <div class="mv_dtls">
+        <app-movie-details ></app-movie-details>
+      </div>
+  </div>
+</div> 

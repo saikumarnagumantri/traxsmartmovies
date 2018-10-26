@@ -1,0 +1,23 @@
+ <div class="lst_row" *ngFor="let movie of movies"  (click)="movieData(movie.id)" >
+    <div class="left_div">
+      <img src="./../../assets/images/dummy.png" *ngIf="movie.poster_path==null">
+      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" *ngIf="movie.poster_path!=null">
+    </div>
+    <div class="right_div">
+      <h4>{{movie.original_title}}</h4>
+      <p>Rated {{movie.vote_average}}/10</p>
+      <p>Released on {{movie.release_date | date}}</p>
+    </div>
+    <div class="p_mv">
+      <p>{{movie.overview |textLimit}}</p>
+    </div>
+  </div>
+ <div class="no_results" *ngIf="count==0">
+  <p>No Movies Found with name <span>{{movieName}}</span></p>
+</div>
+
+<div class="mask" *ngIf="showLoader">
+    <div class="loadergif">
+        <img src="./../../assets/images/Dual Ring-1s-200px.gif">
+    </div>
+</div>
